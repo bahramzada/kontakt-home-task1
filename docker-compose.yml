@@ -1,0 +1,8 @@
+services:
+  kontakt-qc:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./:/app
+    command: ["python", "main.py", "eval-dataset", "--dataset", "Task_1_Eval_dataset(1).json"]
